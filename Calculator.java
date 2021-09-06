@@ -24,8 +24,6 @@ class Calculator implements ActionListener {
 
     static int operator = 0;
 
-    static final String errorMessage = "Matematik tegn kan ikke sættes der!";
-
     Calculator() {
 
         frame = new JFrame("Lommeregner");
@@ -51,7 +49,7 @@ class Calculator implements ActionListener {
         buttonDivide = new JButton("/");
         buttonDecimal = new JButton(",");
 
-        // Funktioner
+        // Funktions knapper
         buttonEquals = new JButton("=");
         buttonClear = new JButton("C");
         buttonDelete = new JButton("DEL");
@@ -82,12 +80,12 @@ class Calculator implements ActionListener {
         button0.setBounds(110,310,50,40);
 
         buttonDivide.setBounds(250,310,50,40);
-        
+
         buttonEquals.setBounds(180,380,100,40);
         buttonDelete.setBounds(60,380,100,40);
         buttonClear.setBounds(180,310,50,40);
 
-        // Sæt de forskellige knapper i GUI'en og andre diverse GUI ting så som ActionListeners.
+        // Sæt de forskellige knapper i GUI systemet og andre diverse GUI ting så som ActionListeners.
         frame.add(field);
 
         frame.add(button7);
@@ -145,114 +143,100 @@ class Calculator implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        Object src = e.getSource();
-
-        if(src == button1) {
+        if(e.getSource() == button1) {
 
             field.setText(field.getText().concat("1"));
 
-        } if(src == button2) {
+        } if(e.getSource() == button2) {
 
             field.setText(field.getText().concat("2"));
 
-        } if(src == button3) {
+        } if(e.getSource() == button3) {
 
             field.setText(field.getText().concat("3"));
 
-        } if(src == button4) {
+        } if(e.getSource() == button4) {
 
             field.setText(field.getText().concat("4"));
 
-        } if(src == button5) {
+        } if(e.getSource() == button5) {
 
             field.setText(field.getText().concat("5"));
 
-        } if(src == button6) {
+        } if(e.getSource() == button6) {
 
             field.setText(field.getText().concat("6"));
 
-        } if(src == button7) {
+        } if(e.getSource() == button7) {
 
             field.setText(field.getText().concat("7"));
 
-        } if(src == button8) {
+        } if(e.getSource() == button8) {
 
             field.setText(field.getText().concat("8"));
 
-        } if(src == button9) {
+        } if(e.getSource() == button9) {
 
             field.setText(field.getText().concat("9"));
 
-        } if(src ==button0) {
+        } if(e.getSource() ==button0) {
 
             field.setText(field.getText().concat("0"));
 
-        } if(src == buttonDecimal) {
+        } if(e.getSource() == buttonDecimal) {
 
             field.setText(field.getText().concat("."));
 
-        } if(src == buttonPlus) {
+        } if(e.getSource() == buttonPlus) {
 
             valueOne = Double.parseDouble(field.getText());
             operator = 1;
 
             field.setText("");
 
-        } if(src == buttonMinus) {
+        } if(e.getSource() == buttonMinus) {
 
             valueOne = Double.parseDouble(field.getText());
             operator = 2;
 
             field.setText("");
 
-        } if(src == buttonMultiply) {
+        } if(e.getSource() == buttonMultiply) {
 
             valueOne=Double.parseDouble(field.getText());
             operator=3;
             field.setText("");
 
-        } if(src == buttonDivide) {
+        } if(e.getSource() == buttonDivide) {
 
             valueOne=Double.parseDouble(field.getText());
             operator=4;
             field.setText("");
 
-        } if(src == buttonEquals) {
+        } if(e.getSource() == buttonEquals) {
 
             valueTwo = Double.parseDouble(field.getText());
 
-            switch(operator) {
+            switch (operator) {
 
-                case 1:
+                case 1 -> result = valueOne + valueTwo;
 
-                    result = valueOne + valueTwo;
-                    break;
-                case 2:
+                case 2 -> result = valueOne - valueTwo;
 
-                    result = valueOne - valueTwo;
-                    break;
+                case 3 -> result = valueOne * valueTwo;
 
-                case 3:
+                case 4 -> result = valueOne / valueTwo;
 
-                    result = valueOne * valueTwo;
-                    break;
-
-                case 4:
-                    result = valueOne / valueTwo;
-                    break;
-
-                default:
-
-                    result = 0;
+                default -> result = 0;
             }
 
             field.setText("" + result);
 
-        } if(src == buttonClear) {
+        } if(e.getSource() == buttonClear) {
 
             field.setText("");
 
-        } if(e.getSource()== buttonDelete) {
+        } if(e.getSource() == buttonDelete) {
 
             String str = field.getText();
             field.setText("");
