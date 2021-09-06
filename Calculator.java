@@ -53,7 +53,7 @@ class Calculator implements ActionListener {
 
         // Funktioner
         buttonEquals = new JButton("=");
-        buttonClear = new JButton("CLR");
+        buttonClear = new JButton("C");
         buttonDelete = new JButton("DEL");
 
         // Lav grænser til de forskellige knapper.
@@ -251,7 +251,7 @@ class Calculator implements ActionListener {
 
             field.setText("");
 
-        } if(src == buttonDelete) {
+        } if(e.getSource()== buttonDelete) {
 
             String str = field.getText();
             field.setText("");
