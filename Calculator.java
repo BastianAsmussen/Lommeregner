@@ -144,77 +144,79 @@ class Calculator implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource() == button1) {
+        Object src = e.getSource();
+
+        if(src == button1) {
 
             field.setText(field.getText().concat("1"));
 
-        } if(e.getSource() == button2) {
+        } if(src == button2) {
 
             field.setText(field.getText().concat("2"));
 
-        } if(e.getSource() == button3) {
+        } if(src == button3) {
 
             field.setText(field.getText().concat("3"));
 
-        } if(e.getSource() == button4) {
+        } if(src == button4) {
 
             field.setText(field.getText().concat("4"));
 
-        } if(e.getSource() == button5) {
+        } if(src == button5) {
 
             field.setText(field.getText().concat("5"));
 
-        } if(e.getSource() == button6) {
+        } if(src == button6) {
 
             field.setText(field.getText().concat("6"));
 
-        } if(e.getSource() == button7) {
+        } if(src == button7) {
 
             field.setText(field.getText().concat("7"));
 
-        } if(e.getSource() == button8) {
+        } if(src == button8) {
 
             field.setText(field.getText().concat("8"));
 
-        } if(e.getSource() == button9) {
+        } if(src == button9) {
 
             field.setText(field.getText().concat("9"));
 
-        } if(e.getSource() ==button0) {
+        } if(src ==button0) {
 
             field.setText(field.getText().concat("0"));
 
-        } if(e.getSource() == buttonDecimal) {
+        } if(src == buttonDecimal) {
 
             field.setText(field.getText().concat("."));
 
-        } if(e.getSource() == buttonPlus) {
+        } if(src == buttonPlus) {
 
             valueOne = Double.parseDouble(field.getText());
             operator = 1;
 
             field.setText("");
 
-        } if(e.getSource() == buttonMinus) {
+        } if(src == buttonMinus) {
 
             valueOne = Double.parseDouble(field.getText());
             operator = 2;
 
             field.setText("");
 
-        } if(e.getSource() == buttonMultiply) {
+        } if(src == buttonMultiply) {
 
             valueOne=Double.parseDouble(field.getText());
             operator=3;
             field.setText("");
 
-        } if(e.getSource() == buttonDivide) {
+        } if(src == buttonDivide) {
 
             valueOne=Double.parseDouble(field.getText());
             operator=4;
             field.setText("");
 
-        } if(e.getSource() == buttonEquals) {
+        } if(src == buttonEquals) {
 
             valueTwo = Double.parseDouble(field.getText());
 
@@ -245,11 +247,11 @@ class Calculator implements ActionListener {
 
             field.setText("" + result);
 
-        } if(e.getSource() == buttonClear) {
+        } if(src == buttonClear) {
 
             field.setText("");
 
-        } if(e.getSource()== buttonDelete) {
+        } if(src == buttonDelete) {
 
             String str = field.getText();
             field.setText("");
