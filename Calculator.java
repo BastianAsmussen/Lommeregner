@@ -63,28 +63,29 @@ class Calculator implements ActionListener {
         button8.setBounds(110, 100, 50, 40);
         button9.setBounds(180, 100, 50, 40);
 
-        buttonDivide.setBounds(250, 100, 50, 40);
+        buttonPlus.setBounds(250, 100, 50, 40);
 
         button4.setBounds(40,170,50,40);
         button5.setBounds(110,170,50,40);
         button6.setBounds(180,170,50,40);
 
-        buttonMultiply.setBounds(250,170,50,40);
+        buttonMinus.setBounds(250,170,50,40);
 
         button1.setBounds(40,240,50,40);
         button2.setBounds(110,240,50,40);
         button3.setBounds(180,240,50,40);
 
-        buttonMinus.setBounds(250,240,50,40);
+        buttonMultiply.setBounds(250,240,50,40);
 
         buttonDecimal.setBounds(40,310,50,40);
 
         button0.setBounds(110,310,50,40);
 
-        buttonEquals.setBounds(180,310,50,40);
-        buttonPlus.setBounds(250,310,50,40);
+        buttonDivide.setBounds(250,310,50,40);
+        
+        buttonEquals.setBounds(180,380,100,40);
         buttonDelete.setBounds(60,380,100,40);
-        buttonClear.setBounds(180,380,100,40);
+        buttonClear.setBounds(180,310,50,40);
 
         // Sæt de forskellige knapper i GUI'en og andre diverse GUI ting så som ActionListeners.
         frame.add(field);
