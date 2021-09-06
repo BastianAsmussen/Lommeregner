@@ -1,7 +1,9 @@
 package dev.asmussen;
 
 // Imports
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -184,69 +186,33 @@ class Calculator implements ActionListener {
 
         } if(e.getSource() == buttonDecimal) {
 
-            if(field.getText() == "") {
+            field.setText(field.getText().concat("."));
 
-                JOptionPane.showMessageDialog(frame, errorMessage);
-
-            } else {
-
-                field.setText(field.getText().concat("."));
-            }
-            
         } if(e.getSource() == buttonPlus) {
-            if(field.getText() == "") {
 
-                JOptionPane.showMessageDialog(frame, errorMessage);
+            valueOne = Double.parseDouble(field.getText());
+            operator = 1;
 
-            } else {
-
-                valueOne = Double.parseDouble(field.getText());
-                operator = 1;
-
-                field.setText("");
-            }
+            field.setText("");
 
         } if(e.getSource() == buttonMinus) {
 
-            if(field.getText() == "") {
+            valueOne = Double.parseDouble(field.getText());
+            operator = 2;
 
-                JOptionPane.showMessageDialog(frame, errorMessage);
-
-            } else {
-
-                valueOne = Double.parseDouble(field.getText());
-                operator = 2;
-
-                field.setText("");
-            }
+            field.setText("");
 
         } if(e.getSource() == buttonMultiply) {
 
-            if(field.getText() == "") {
-
-                JOptionPane.showMessageDialog(frame, errorMessage);
-
-            } else {
-
-                valueOne = Double.parseDouble(field.getText());
-                operator = 3;
-
-                field.setText("");
-            }
+            valueOne=Double.parseDouble(field.getText());
+            operator=3;
+            field.setText("");
 
         } if(e.getSource() == buttonDivide) {
 
-            if(field.getText() == "") {
-
-                JOptionPane.showMessageDialog(frame, errorMessage);
-
-            } else {
-
-                valueOne=Double.parseDouble(field.getText());
-                operator=4;
-
-                field.setText("");
-            }
+            valueOne=Double.parseDouble(field.getText());
+            operator=4;
+            field.setText("");
 
         } if(e.getSource() == buttonEquals) {
 
@@ -258,7 +224,6 @@ class Calculator implements ActionListener {
 
                     result = valueOne + valueTwo;
                     break;
-
                 case 2:
 
                     result = valueOne - valueTwo;
@@ -270,7 +235,6 @@ class Calculator implements ActionListener {
                     break;
 
                 case 4:
-
                     result = valueOne / valueTwo;
                     break;
 
