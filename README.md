@@ -16,3 +16,6 @@
 - Jeg fik en meget pludselig lyst til at omprogrammere hele GUI systemet.
 - Jeg skrev også koden mere effektivt og kompakt.
 - Jeg skrev også kommentare for at gøre det nemmere at forstå hvad der sker i koden.
+
+### 07/09/2021
+- Jeg følte min lommeregner kunne det den skulle men det er et jo et projekt og jeg havde 3 dage tilbage og derfor ville jeg lige lave lidt ekstra og lavede derfor et mørkt og lyst tema til lommeregneren.
