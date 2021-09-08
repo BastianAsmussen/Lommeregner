@@ -202,13 +202,13 @@ class Calculator implements ActionListener {
         } if(e.getSource() == buttonMultiply) {
 
             valueOne=Double.parseDouble(field.getText());
-            operator=3;
+            operator = 3;
             field.setText("");
 
         } if(e.getSource() == buttonDivide) {
 
             valueOne=Double.parseDouble(field.getText());
-            operator=4;
+            operator = 4;
             field.setText("");
 
         } if(e.getSource() == buttonEquals) {
