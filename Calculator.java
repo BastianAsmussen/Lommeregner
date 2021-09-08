@@ -59,7 +59,7 @@ class Calculator implements ActionListener {
         buttonClear = new JButton("C");
         buttonDelete = new JButton("DEL");
 
-        buttonTheme = new JButton("Tema");
+        buttonTheme = new JButton("TEMA");
 
         // Lav grænser til de forskellige knapper.
         field.setBounds(30,40,280,30);
