@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 class Calculator implements ActionListener {
 
@@ -133,29 +134,9 @@ class Calculator implements ActionListener {
         colorTheme("Light");
 
         // ActionListeners
-        button1.addActionListener(this);
-        button2.addActionListener(this);
-        button3.addActionListener(this);
-        button4.addActionListener(this);
-        button5.addActionListener(this);
-        button6.addActionListener(this);
-        button7.addActionListener(this);
-        button8.addActionListener(this);
-        button9.addActionListener(this);
-        button0.addActionListener(this);
-
-        buttonPlus.addActionListener(this);
-        buttonDivide.addActionListener(this);
-        buttonMultiply.addActionListener(this);
-        buttonMinus.addActionListener(this);
-
-        buttonDecimal.addActionListener(this);
-
-        buttonEquals.addActionListener(this);
-        buttonDelete.addActionListener(this);
-        buttonClear.addActionListener(this);
-
-        buttonTheme.addActionListener(this);
+        for (JButton buttons : Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonDivide, buttonMultiply, buttonMinus, buttonDecimal, buttonEquals, buttonDelete, buttonClear, buttonTheme)) {
+            buttons.addActionListener(this);
+        }
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -283,48 +264,10 @@ class Calculator implements ActionListener {
 
             frame.getContentPane().setBackground(new Color(220, 220, 220));
 
-            button1.setBackground(new Color(220, 220, 220));
-            button1.setForeground(Color.BLACK);
-            button2.setBackground(new Color(220, 220, 220));
-            button2.setForeground(Color.BLACK);
-            button3.setBackground(new Color(220, 220, 220));
-            button3.setForeground(Color.BLACK);
-            button4.setBackground(new Color(220, 220, 220));
-            button4.setForeground(Color.BLACK);
-            button5.setBackground(new Color(220, 220, 220));
-            button5.setForeground(Color.BLACK);
-            button6.setBackground(new Color(220, 220, 220));
-            button6.setForeground(Color.BLACK);
-            button7.setBackground(new Color(220, 220, 220));
-            button7.setForeground(Color.BLACK);
-            button8.setBackground(new Color(220, 220, 220));
-            button8.setForeground(Color.BLACK);
-            button9.setBackground(new Color(220, 220, 220));
-            button9.setForeground(Color.BLACK);
-            button0.setBackground(new Color(220, 220, 220));
-            button0.setForeground(Color.BLACK);
-
-            buttonPlus.setBackground(new Color(220, 220, 220));
-            buttonPlus.setForeground(Color.BLACK);
-            buttonDivide.setBackground(new Color(220, 220, 220));
-            buttonDivide.setForeground(Color.BLACK);
-            buttonMultiply.setBackground(new Color(220, 220, 220));
-            buttonMultiply.setForeground(Color.BLACK);
-            buttonMinus.setBackground(new Color(220, 220, 220));
-            buttonMinus.setForeground(Color.BLACK);
-
-            buttonDecimal.setBackground(new Color(220, 220, 220));
-            buttonDecimal.setForeground(Color.BLACK);
-
-            buttonEquals.setBackground(new Color(220, 220, 220));
-            buttonEquals.setForeground(Color.BLACK);
-            buttonDelete.setBackground(new Color(220, 220, 220));
-            buttonDelete.setForeground(Color.BLACK);
-            buttonClear.setBackground(new Color(220, 220, 220));
-            buttonClear.setForeground(Color.BLACK);
-
-            buttonTheme.setBackground(new Color(220, 220, 220));
-            buttonTheme.setForeground(Color.BLACK);
+            for (JButton buttons : Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonDivide, buttonMultiply, buttonMinus, buttonDecimal, buttonEquals, buttonDelete, buttonClear, buttonTheme)) {
+                buttons.setBackground(new Color(220, 220, 220));
+                buttons.setForeground(Color.BLACK);
+            }
 
         } else {
 
@@ -332,49 +275,10 @@ class Calculator implements ActionListener {
 
             frame.getContentPane().setBackground(new Color(65, 65, 65));
 
-            button1.setBackground(new Color(65, 65, 65));
-            button1.setForeground(Color.WHITE);
-            button2.setBackground(new Color(65, 65, 65));
-            button2.setForeground(Color.WHITE);
-            button3.setBackground(new Color(65, 65, 65));
-            button3.setForeground(Color.WHITE);
-            button4.setBackground(new Color(65, 65, 65));
-            button4.setForeground(Color.WHITE);
-            button5.setBackground(new Color(65, 65, 65));
-            button5.setForeground(Color.WHITE);
-            button6.setBackground(new Color(65, 65, 65));
-            button6.setForeground(Color.WHITE);
-            button7.setBackground(new Color(65, 65, 65));
-            button7.setForeground(Color.WHITE);
-            button8.setBackground(new Color(65, 65, 65));
-            button8.setForeground(Color.WHITE);
-            button9.setBackground(new Color(65, 65, 65));
-            button9.setForeground(Color.WHITE);
-            button0.setBackground(new Color(65, 65, 65));
-            button0.setForeground(Color.WHITE);
-
-            buttonPlus.setBackground(new Color(65, 65, 65));
-            buttonPlus.setForeground(Color.WHITE);
-            buttonDivide.setBackground(new Color(65, 65, 65));
-            buttonDivide.setForeground(Color.WHITE);
-            buttonMultiply.setBackground(new Color(65, 65, 65));
-            buttonMultiply.setForeground(Color.WHITE);
-            buttonMinus.setBackground(new Color(65, 65, 65));
-            buttonMinus.setForeground(Color.WHITE);
-
-            buttonDecimal.setBackground(new Color(65, 65, 65));
-            buttonDecimal.setForeground(Color.WHITE);
-
-            buttonEquals.setBackground(new Color(65, 65, 65));
-            buttonEquals.setForeground(Color.WHITE);
-            buttonDelete.setBackground(new Color(65, 65, 65));
-            buttonDelete.setForeground(Color.WHITE);
-            buttonClear.setBackground(new Color(65, 65, 65));
-            buttonClear.setForeground(Color.WHITE);
-
-            buttonTheme.setBackground(new Color(65, 65, 65));
-            buttonTheme.setForeground(Color.WHITE);
-
+            for (JButton buttons : Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonDivide, buttonMultiply, buttonMinus, buttonDecimal, buttonEquals, buttonDelete, buttonClear, buttonTheme)) {
+                buttons.setBackground(new Color(65, 65, 65));
+                buttons.setForeground(Color.WHITE);
+            }
         }
     }
 }
