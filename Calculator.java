@@ -262,10 +262,10 @@ class Calculator implements ActionListener {
 
             colorTheme = "Light";
 
-            frame.getContentPane().setBackground(new Color(220, 220, 220));
+            frame.getContentPane().setBackground(Color.WHITE);
 
             for (JButton buttons : Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonDivide, buttonMultiply, buttonMinus, buttonDecimal, buttonEquals, buttonDelete, buttonClear, buttonTheme)) {
-                buttons.setBackground(new Color(220, 220, 220));
+                buttons.setBackground(Color.WHITE);
                 buttons.setForeground(Color.BLACK);
             }
 
@@ -273,10 +273,10 @@ class Calculator implements ActionListener {
 
             colorTheme = "Dark";
 
-            frame.getContentPane().setBackground(new Color(65, 65, 65));
+            frame.getContentPane().setBackground(new Color(44, 47, 51));
 
             for (JButton buttons : Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonDivide, buttonMultiply, buttonMinus, buttonDecimal, buttonEquals, buttonDelete, buttonClear, buttonTheme)) {
-                buttons.setBackground(new Color(65, 65, 65));
+                buttons.setBackground(new Color(44, 47, 51));
                 buttons.setForeground(Color.WHITE);
             }
         }
