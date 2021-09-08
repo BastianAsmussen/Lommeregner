@@ -19,3 +19,7 @@
 
 ### 07/09/2021
 - Jeg følte min lommeregner kunne det den skulle men det er et jo et projekt og jeg havde 3 dage tilbage og derfor ville jeg lige lave lidt ekstra og lavede derfor et mørkt og lyst tema til lommeregneren.
+
+### 08/09/2021
+- Jeg lavede om på mit mørke tema og lyse tema og nu ser det bedre ud. Jeg overvejer også at tilføje sinus, cosinus og tangens.
+- Jeg begyndte at hjælpe en person som ikke kunne finde ud af programmering overhovdet og nu kan han Java basics.
