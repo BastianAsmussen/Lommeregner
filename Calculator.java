@@ -177,7 +177,7 @@ class Calculator implements ActionListener {
 
             field.setText(field.getText().concat("9"));
 
-        } if(e.getSource() ==button0) {
+        } if(e.getSource() == button0) {
 
             field.setText(field.getText().concat("0"));
 
