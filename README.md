@@ -24,3 +24,8 @@
 - Jeg lavede om på mit mørke tema og lyse tema og nu ser det bedre ud. Jeg overvejer også at tilføje sinus, cosinus og tangens.
 - Jeg begyndte at hjælpe en person som ikke kunne finde ud af programmering overhovdet og nu kan han Java basics.
 - Jeg brugte resten af dagen på at lære C# hvilket ikke var så svært siden jeg er god til Java så det var ikke specielt svært men der et par ting man skal vænde sig til.
+
+### 09/09/2021
+- Jeg hjalp 4 personer med deres programmering og lærte en at brugte GitHub.
+- Jeg lavede ikke specielt meget på mit eget projekt siden det hele virkede men jeg ryddede også lidt op i min kode så koden var mere ren.
+- Jeg tilføjede også en del kommentare for at forklare hvad der forgik i de forskællige systemer.
