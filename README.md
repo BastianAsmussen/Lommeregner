@@ -1,5 +1,5 @@
 # Lommeregner
-- En lommeregner i Java med JFrame frameworket.
+- En lommeregner i Java med "swing" frameworket.
 
 ## Logbog
 
