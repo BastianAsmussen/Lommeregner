@@ -1,17 +1,19 @@
 package dev.asmussen;
 
-// Imports
+// Importer alle libraries.
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import java.awt.*;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
+
 class Calculator implements ActionListener {
 
+    // Her under sætter jeg alle variablerne op der skal over alt.
     JFrame frame;
 
     JTextField field;
@@ -27,15 +29,19 @@ class Calculator implements ActionListener {
     static double valueTwo = 0;
     static double result = 0;
 
-    static int operator = 0;
+    static int mathOperator = 0;
 
+    // Denne method bruges til at starte hele systemet for at bruge lommeregneren skal man skrive "new Calculator();".
     Calculator() {
 
         frame = new JFrame("Lommeregner");
 
         field = new JTextField();
 
-        // Tal
+        // Gør det umuligt at skrive i tekst feltet.
+        field.setEditable(false);
+
+        // Opret tal knapperne.
         button1 = new JButton("1");
         button2 = new JButton("2");
         button3 = new JButton("3");
@@ -47,54 +53,55 @@ class Calculator implements ActionListener {
         button9 = new JButton("9");
         button0 = new JButton("0");
 
-        // Tegn
+        // Opret de forskellige matematik knapper.
         buttonPlus = new JButton("+");
         buttonMinus = new JButton("-");
         buttonMultiply = new JButton("*");
         buttonDivide = new JButton("/");
+
         buttonDecimal = new JButton(",");
 
-        // Funktions knapper
+        // Funktions knapper så som knappen til at udregne det hele eller skifte temaet.
         buttonEquals = new JButton("=");
         buttonClear = new JButton("C");
         buttonDelete = new JButton("DEL");
 
         buttonTheme = new JButton("TEMA");
 
-        // Lav grænser til de forskellige knapper.
+        // Sæt placeringen og størrelsen af alle knapperne.
         field.setBounds(30,40,280,30);
 
-        button7.setBounds(40, 100, 50, 40);
-        button8.setBounds(110, 100, 50, 40);
-        button9.setBounds(180, 100, 50, 40);
+        button7.setBounds(40, 100, 50, 50);
+        button8.setBounds(110, 100, 50, 50);
+        button9.setBounds(180, 100, 50, 50);
 
-        buttonPlus.setBounds(250, 100, 50, 40);
+        buttonPlus.setBounds(250, 100, 50, 50);
 
-        button4.setBounds(40,170,50,40);
-        button5.setBounds(110,170,50,40);
-        button6.setBounds(180,170,50,40);
+        button4.setBounds(40,170,50, 50);
+        button5.setBounds(110,170,50, 50);
+        button6.setBounds(180,170,50, 50);
 
-        buttonMinus.setBounds(250,170,50,40);
+        buttonMinus.setBounds(250,170,50, 50);
 
-        button1.setBounds(40,240,50,40);
-        button2.setBounds(110,240,50,40);
-        button3.setBounds(180,240,50,40);
+        button1.setBounds(40,240,50, 50);
+        button2.setBounds(110,240,50, 50);
+        button3.setBounds(180,240,50, 50);
 
-        buttonMultiply.setBounds(250,240,50,40);
+        buttonMultiply.setBounds(250,240,50, 50);
 
-        buttonDecimal.setBounds(40,310,50,40);
+        buttonDecimal.setBounds(40,310,50, 50);
 
-        button0.setBounds(110,310,50,40);
+        button0.setBounds(110,310,50, 50);
 
-        buttonDivide.setBounds(250,310,50,40);
+        buttonDivide.setBounds(250,310,50, 50);
 
         buttonEquals.setBounds(180,380,100,40);
         buttonDelete.setBounds(60,380,100,40);
-        buttonClear.setBounds(180,310,50,40);
+        buttonClear.setBounds(180,310,50, 50);
 
         buttonTheme.setBounds(17,450,300,40);
 
-        // Sæt de forskellige knapper i GUI systemet og andre diverse GUI ting så som ActionListeners.
+        // Tilføj alle knapperne til GUIen.
         frame.add(field);
 
         frame.add(button7);
@@ -131,14 +138,24 @@ class Calculator implements ActionListener {
         frame.setSize(350, 550);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
-        colorTheme("Light");
+        frame.setLocationRelativeTo(null);
 
-        // ActionListeners
+        // Sætter farve temaet med "colorTheme();" metoden.
+        colorTheme(colorTheme);
+
+        /*
+        For at lave action listeners til alle knapperne brugte jeg et super smart system hvor jeg tilføjede alle knapperne til et array
+        og i en for lykke brugte jeg array listen til at loope alle knapperne og tilføje en action listener til dem alle.
+        */
         for (JButton buttons : Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonPlus, buttonDivide, buttonMultiply, buttonMinus, buttonDecimal, buttonEquals, buttonDelete, buttonClear, buttonTheme)) {
             buttons.addActionListener(this);
         }
     }
 
+    /*
+    Her er actionPerformed metoden, den bruges til at tjekke om de forskellige knapper bliver trykket på
+    og udføre den tilsvarende handling.
+    */
     public void actionPerformed(ActionEvent e) {
 
         if(e.getSource() == button1) {
@@ -188,41 +205,38 @@ class Calculator implements ActionListener {
         } if(e.getSource() == buttonPlus) {
 
             valueOne = Double.parseDouble(field.getText());
-            operator = 1;
+            mathOperator = 1;
 
             field.setText("");
 
         } if(e.getSource() == buttonMinus) {
 
             valueOne = Double.parseDouble(field.getText());
-            operator = 2;
+            mathOperator = 2;
 
             field.setText("");
 
         } if(e.getSource() == buttonMultiply) {
 
             valueOne=Double.parseDouble(field.getText());
-            operator = 3;
+            mathOperator = 3;
             field.setText("");
 
         } if(e.getSource() == buttonDivide) {
 
             valueOne=Double.parseDouble(field.getText());
-            operator = 4;
+            mathOperator = 4;
             field.setText("");
 
         } if(e.getSource() == buttonEquals) {
 
             valueTwo = Double.parseDouble(field.getText());
 
-            switch (operator) {
+            switch (mathOperator) {
 
                 case 1 -> result = valueOne + valueTwo;
-
                 case 2 -> result = valueOne - valueTwo;
-
                 case 3 -> result = valueOne * valueTwo;
-
                 case 4 -> result = valueOne / valueTwo;
 
                 default -> result = 0;
@@ -256,6 +270,11 @@ class Calculator implements ActionListener {
         }
     }
 
+    /*
+    colorTheme(); bruger samme system som jeg brugte til at tilføje action listeners til knapperne
+    først så ændre den variablen som også hedder colorTheme til enten "Light" eller "Dark".
+    Det gør det nemmere for systemet at forstå hvad der foregår og derefter ændre systemet farverne i lommeregneren.
+    */
     public void colorTheme(String theme) {
 
         if (theme.equals("Light")) {
