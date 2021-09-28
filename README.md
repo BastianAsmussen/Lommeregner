@@ -30,3 +30,8 @@
 - Jeg hjalp 4 personer med deres programmering og lærte en at brugte GitHub.
 - Jeg lavede ikke specielt meget på mit eget projekt siden det hele virkede men jeg ryddede også lidt op i min kode så koden var mere ren.
 - Jeg tilføjede også en hel del kommentare for at forklare hvad der forgik i de forskællige systemer.
+
+## Hvad har jeg lært?
+- Jeg lærte at bruge Java Swing frameworket hvilket er en nyere version af AWT.
+- Jeg lærte at lave graphical user interfaces (GUIs) med Java Swing. Jeg lærte b.la. at bruge: JFrame, JLabel, JPanel, JTextField, JButton og andre ting fra javax.swing pakken.
+- Jeg vidste en hel del af det programmering der skulle laves i forvejen.
