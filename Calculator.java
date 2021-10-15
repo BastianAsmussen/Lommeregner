@@ -1,4 +1,4 @@
-package dev.asmussen;
+package tech.asmussen;
 
 // Importer alle libraries.
 import javax.swing.JButton;
