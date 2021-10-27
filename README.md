@@ -1,5 +1,5 @@
 # Lommeregner
-- Java Version: 16
+- Java version: 16
 - En lommeregner i Java med "swing" frameworket.
 
 ## Logbog
